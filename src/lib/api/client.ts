@@ -89,9 +89,11 @@ async function performRefresh(): Promise<string> {
     throw new ApiError(response.status, message);
   }
 
-  const data = await response.json();
-  setAccessToken(data.accessToken);
-  return data.accessToken as string;
+  // Backend envelope is {success, message, data}; see apiRequest() below.
+  const body = await response.json();
+  const accessToken = body.data.accessToken as string;
+  setAccessToken(accessToken);
+  return accessToken;
 }
 
 /**
@@ -152,5 +154,8 @@ export async function apiRequest<T>(path: string, options: RequestOptions = {}):
     return undefined as T;
   }
 
-  return response.json() as Promise<T>;
+  // Backend returns every success response as {success, message, data} —
+  // T describes the shape of `data`, not the whole envelope.
+  const body = await response.json();
+  return body.data as T;
 }
