@@ -1,8 +1,13 @@
 import { buildMetadata } from "@/lib/metadata";
-import PortalView from "@/components/portal/PortalView";
+import PortalShell from "@/components/portal/PortalShell";
+import DashboardOverview from "@/components/portal/DashboardOverview";
 
 export const metadata = buildMetadata("DAC Accounting | Client Portal", "Your DAC Accounting client portal.");
 
 export default function PortalPage() {
-  return <PortalView />;
+  return (
+    <PortalShell>
+      <DashboardOverview />
+    </PortalShell>
+  );
 }

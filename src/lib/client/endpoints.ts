@@ -1,0 +1,15 @@
+export const CLIENT_ENDPOINTS = {
+  dashboard: "/client/dashboard",
+  requests: "/client/requests",
+  request: (id: string) => `/client/requests/${id}`,
+  requestDocuments: (id: string) => `/client/requests/${id}/documents`,
+  documents: "/client/documents",
+  documentDownload: (id: string) => `/client/documents/${id}/download`,
+  informationRequests: "/client/information-requests",
+  respondToInformationRequest: (id: string) => `/client/information-requests/${id}/respond`,
+  notifications: "/client/notifications",
+  markNotificationRead: (id: string) => `/client/notifications/${id}/read`,
+  markAllNotificationsRead: "/client/notifications/read-all",
+  account: "/client/account",
+  changePassword: "/client/account/password",
+} as const;

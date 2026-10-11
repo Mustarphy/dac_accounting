@@ -12,6 +12,12 @@ import type { NextRequest } from "next/server";
  * This only works if Laravel sets the cookie's Domain to the shared
  * parent domain (e.g. `.dacaccounting.com`) so it's visible to requests
  * made to the frontend's own origin. See docs/auth-api-contract.md.
+ *
+ * Covers /admin too, but ONLY for "is anyone logged in" — this cookie
+ * carries no role information, so it can't tell a client from staff.
+ * The admin shell's RequireStaff does the real (still client-side, still
+ * non-authoritative) role check; the backend's `role:admin,staff`
+ * middleware is what actually matters.
  */
 const REFRESH_TOKEN_COOKIE = "dac_refresh_token";
 
@@ -28,5 +34,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/portal/:path*"],
+  matcher: ["/portal/:path*", "/admin/:path*"],
 };

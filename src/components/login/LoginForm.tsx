@@ -41,8 +41,9 @@ export default function LoginForm() {
 
     setStatus("loading");
     try {
-      await login({ email: email.trim(), password, rememberMe });
-      router.push(searchParams.get("redirect") || "/portal");
+      const user = await login({ email: email.trim(), password, rememberMe });
+      const isStaffMember = user.role === "staff" || user.role === "admin";
+      router.push(searchParams.get("redirect") || (isStaffMember ? "/admin" : "/portal"));
     } catch (error) {
       if (error instanceof ApiNotConfiguredError) {
         setStatus("unavailable");
