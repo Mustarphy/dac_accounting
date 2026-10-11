@@ -117,6 +117,9 @@ export async function apiRequest<T>(path: string, options: RequestOptions = {}):
 
   const { auth = true, _isRetry = false, headers, ...rest } = options;
   const accessToken = auth ? getAccessToken() : null;
+  // FormData (file uploads) must NOT get a manual Content-Type — the
+  // browser sets the multipart boundary itself. JSON bodies still do.
+  const isFormData = rest.body instanceof FormData;
 
   let response: Response;
   try {
@@ -124,7 +127,7 @@ export async function apiRequest<T>(path: string, options: RequestOptions = {}):
       ...rest,
       credentials: "include",
       headers: {
-        "Content-Type": "application/json",
+        ...(isFormData ? {} : { "Content-Type": "application/json" }),
         ...(accessToken ? { Authorization: `Bearer ${accessToken}` } : {}),
         ...headers,
       },
@@ -158,4 +161,46 @@ export async function apiRequest<T>(path: string, options: RequestOptions = {}):
   // T describes the shape of `data`, not the whole envelope.
   const body = await response.json();
   return body.data as T;
+}
+
+/**
+ * For binary downloads (documents), which aren't JSON and need the
+ * Authorization header a plain <a href> can't attach. Fetches the file
+ * as a blob and triggers a browser save via a throwaway anchor element.
+ */
+export async function downloadFile(path: string, filename: string): Promise<void> {
+  if (!API_URL) {
+    throw new ApiNotConfiguredError();
+  }
+
+  const accessToken = getAccessToken();
+  let response: Response;
+  try {
+    response = await fetch(`${API_URL}${path}`, {
+      credentials: "include",
+      headers: accessToken ? { Authorization: `Bearer ${accessToken}` } : {},
+    });
+  } catch (cause) {
+    throw new NetworkError(cause);
+  }
+
+  if (response.status === 401) {
+    await refreshAccessToken();
+    return downloadFile(path, filename);
+  }
+
+  if (!response.ok) {
+    const { message } = await parseErrorBody(response);
+    throw new ApiError(response.status, message);
+  }
+
+  const blob = await response.blob();
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
 }

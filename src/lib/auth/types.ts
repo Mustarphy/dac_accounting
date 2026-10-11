@@ -5,11 +5,20 @@
  * request/response/HTTP-status contract.
  */
 
+export type UserRole = "client" | "staff" | "admin";
+
 export type AuthUser = {
   id: string;
   name: string;
   email: string;
   emailVerifiedAt: string | null;
+  /**
+   * UI convenience only (which nav/shell to render) — never the
+   * security boundary. Every /api/v1/staff/* request is independently
+   * authorized server-side regardless of what this says; see the
+   * backend's UserResource docblock.
+   */
+  role: UserRole;
 };
 
 export type RegisterRequest = {

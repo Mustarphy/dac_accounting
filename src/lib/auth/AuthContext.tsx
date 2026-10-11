@@ -44,6 +44,8 @@ type AuthContextValue = AuthState & {
   signup: (payload: RegisterRequest) => Promise<AuthUser>;
   logout: () => Promise<void>;
   refreshUser: () => Promise<void>;
+  /** UI convenience (which shell to render) — see AuthUser.role. */
+  isStaffMember: boolean;
 };
 
 const AuthContext = createContext<AuthContextValue | null>(null);
@@ -114,9 +116,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     dispatch({ type: "SET_SESSION", user });
   }, []);
 
+  const isStaffMember = state.user?.role === "staff" || state.user?.role === "admin";
+
   const value = useMemo<AuthContextValue>(
-    () => ({ ...state, login, signup, logout, refreshUser }),
-    [state, login, signup, logout, refreshUser]
+    () => ({ ...state, login, signup, logout, refreshUser, isStaffMember }),
+    [state, login, signup, logout, refreshUser, isStaffMember]
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
