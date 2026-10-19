@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { siteConfig } from "@/lib/site-config";
+import Logo from "@/components/ui/Logo";
 import { adminNavItems } from "./nav-items";
 
 type AdminSidebarProps = {
@@ -33,8 +33,8 @@ export default function AdminSidebar({ isOpen, onClose }: AdminSidebarProps) {
         )}
       >
         <div className="flex items-center justify-between px-6 py-5">
-          <Link href="/admin" className="flex items-baseline gap-2 text-lg font-bold tracking-tight text-white">
-            {siteConfig.shortName}
+          <Link href="/admin" className="flex items-center gap-2" aria-label="OAC Accounting admin home">
+            <Logo onDark />
             <span className="rounded bg-primary px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white">
               Admin
             </span>

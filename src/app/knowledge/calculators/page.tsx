@@ -12,8 +12,8 @@ import FinalCTA from "@/components/home/FinalCTA";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata = buildMetadata(
-  "DAC Accounting | Calculators",
-  "Free Nigerian fuel, property stamp duty, VAT and payslip calculators from DAC Accounting."
+  "OAC Accounting | Calculators",
+  "Free Nigerian fuel, property stamp duty, VAT and payslip calculators from OAC Accounting."
 );
 
 export default function CalculatorsPage() {
@@ -24,7 +24,7 @@ export default function CalculatorsPage() {
         <PageHeader
           eyebrow="Knowledge"
           title="Calculators"
-          description="Use our practical calculators to estimate everyday business, tax, property and personal finance figures. Enter your details to get an instant estimate, and contact DAC Accounting for professional advice tailored to your circumstances."
+          description="Use our practical calculators to estimate everyday business, tax, property and personal finance figures. Enter your details to get an instant estimate, and contact OAC Accounting for professional advice tailored to your circumstances."
         />
 
         <Container className="py-16 lg:py-20">

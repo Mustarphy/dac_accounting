@@ -1,17 +1,17 @@
+﻿import Image from "next/image";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeader from "@/components/ui/PageHeader";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ValueGrid from "@/components/ui/ValueGrid";
-import PlaceholderImage from "@/components/ui/PlaceholderImage";
 import FinalCTA from "@/components/home/FinalCTA";
 import { values } from "@/lib/values";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata = buildMetadata(
-  "DAC Accounting | About Us",
-  "Learn about DAC Accounting's approach to professional accounting and financial support."
+  "OAC Accounting | About Us",
+  "Learn about OAC Accounting's approach to professional accounting and financial support."
 );
 
 export default function AboutPage() {
@@ -20,9 +20,9 @@ export default function AboutPage() {
       <Navbar />
       <main className="flex-1">
         <PageHeader
-          eyebrow="About DAC Accounting"
+          eyebrow="About OAC Accounting"
           title="Who we are"
-          description="DAC Accounting provides professional accounting and financial support for businesses and individuals, with a focus on clarity and reliability."
+          description="OAC Accounting provides professional accounting and financial support for businesses and individuals, with a focus on clarity and reliability."
         />
 
         <Container className="grid gap-12 py-16 lg:grid-cols-2 lg:items-center lg:gap-16 lg:py-20">
@@ -43,9 +43,12 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <PlaceholderImage
-            label="Photo: DAC Accounting office or team"
-            className="aspect-4/3 w-full"
+          <Image
+            src="/images/about/gift.png"
+            alt="OAC Accounting office or team"
+            width={800}
+            height={600}
+            className="aspect-4/3 w-full rounded-2xl object-cover"
           />
         </Container>
 

@@ -65,7 +65,7 @@ function ProfileForm({ name: initialName, email, onSaved }: { name: string; emai
           disabled
           className="w-full rounded-md border border-slate-300 bg-slate-50 px-4 py-3 text-sm text-muted"
         />
-        <p className="mt-1.5 text-xs text-muted">Email changes aren&apos;t supported yet — contact DAC Accounting if yours has changed.</p>
+        <p className="mt-1.5 text-xs text-muted">Email changes aren&apos;t supported yet — contact OAC Accounting if yours has changed.</p>
       </div>
 
       <div>

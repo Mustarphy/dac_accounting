@@ -29,8 +29,8 @@ export type ServiceCategory = {
 };
 
 /**
- * Real service list supplied by DAC Accounting. Descriptions are short,
- * neutral summaries based on the service name only — replace with DAC's
+ * Real service list supplied by OAC Accounting. Descriptions are short,
+ * neutral summaries based on the service name only — replace with OAC's
  * own wording whenever available.
  */
 export const serviceCategories: ServiceCategory[] = [

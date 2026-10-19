@@ -55,11 +55,11 @@ export default function VatCalculator() {
         </div>
 
         <div className="mt-8 grid gap-8 lg:grid-cols-2 lg:gap-12">
-          <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
+          <form onSubmit={handleSubmit} noValidate className="flex min-w-0 flex-col gap-5">
             <div>
               <span className="mb-2 block text-sm font-medium text-ink">Does the amount already include VAT?</span>
               <div className="flex gap-3">
-                <label className="flex flex-1 items-center gap-2 rounded-md border border-slate-300 bg-white px-4 py-3 text-sm text-ink has-[:checked]:border-primary has-[:checked]:bg-primary-light">
+                <label className="flex flex-1 items-center gap-2 rounded-md border border-slate-300 bg-white px-4 py-3 text-sm text-ink has-checked:border-primary has-checked:bg-primary-light">
                   <input
                     type="radio"
                     name="direction"
@@ -70,7 +70,7 @@ export default function VatCalculator() {
                   />
                   No, add VAT
                 </label>
-                <label className="flex flex-1 items-center gap-2 rounded-md border border-slate-300 bg-white px-4 py-3 text-sm text-ink has-[:checked]:border-primary has-[:checked]:bg-primary-light">
+                <label className="flex flex-1 items-center gap-2 rounded-md border border-slate-300 bg-white px-4 py-3 text-sm text-ink has-checked:border-primary has-checked:bg-primary-light">
                   <input
                     type="radio"
                     name="direction"
@@ -128,7 +128,7 @@ export default function VatCalculator() {
             </div>
           </form>
 
-          <div>
+          <div className="min-w-0">
             {result ? (
               <ResultCard>
                 <ResultRow label="Amount before VAT" value={formatNaira(result.netAmountKobo)} />
@@ -136,7 +136,7 @@ export default function VatCalculator() {
                 <ResultRow label="Total including VAT" value={formatNaira(result.grossAmountKobo)} emphasis />
               </ResultCard>
             ) : (
-              <div className="flex h-full min-h-[180px] items-center justify-center rounded-xl border border-dashed border-slate-300 bg-white p-6 text-center text-sm text-muted">
+              <div className="flex min-h-45 items-center justify-center rounded-xl border border-dashed border-slate-300 bg-white p-6 text-center text-sm text-muted">
                 Enter an amount and select Calculate to see the VAT breakdown.
               </div>
             )}
@@ -148,7 +148,7 @@ export default function VatCalculator() {
                 and services are taxed identically under the Nigeria Tax Act 2025 — some categories
                 (e.g. basic food, healthcare, education, certain baby products) are zero-rated or
                 exempt. If your transaction falls into one of those categories, this calculator will
-                overstate the VAT due — check with DAC. This tool does not determine VAT-refund or
+                overstate the VAT due — check with OAC. This tool does not determine VAT-refund or
                 input-VAT-recovery eligibility.
               </p>
             </div>

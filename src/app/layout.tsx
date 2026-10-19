@@ -10,8 +10,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata = buildMetadata(
-  "DAC Accounting | Professional Accounting Services",
-  "DAC Accounting provides professional accounting and financial support designed to help businesses stay organized, informed and ready for what comes next."
+  "OAC Accounting | Professional Accounting Services",
+  "OAC Accounting provides professional accounting and financial support designed to help businesses stay organized, informed and ready for what comes next."
 );
 
 export default function RootLayout({

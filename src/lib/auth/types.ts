@@ -1,5 +1,5 @@
 /**
- * Frontend contract for the DAC Accounting authentication API. The Laravel
+ * Frontend contract for the OAC Accounting authentication API. The Laravel
  * backend does not exist yet — these types describe what the frontend
  * expects it to implement. See docs/auth-api-contract.md for the full
  * request/response/HTTP-status contract.

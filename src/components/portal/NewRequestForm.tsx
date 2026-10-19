@@ -106,7 +106,7 @@ export default function NewRequestForm() {
           value={description}
           onChange={(event) => setDescription(event.target.value)}
           disabled={isLoading}
-          placeholder="Any details that will help DAC Accounting get started."
+          placeholder="Any details that will help OAC Accounting get started."
           className="w-full rounded-md border border-slate-300 px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-primary disabled:bg-slate-50"
         />
       </div>

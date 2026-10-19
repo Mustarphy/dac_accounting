@@ -6,7 +6,7 @@ type PlaceholderImageProps = {
 };
 
 /**
- * Temporary stand-in for a real photograph. DAC has not yet supplied
+ * Temporary stand-in for a real photograph. OAC has not yet supplied
  * final imagery, so this renders a clearly-marked placeholder instead of
  * a broken or stock-photo image path.
  *

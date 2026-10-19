@@ -82,7 +82,7 @@ export default function FuelCalculator() {
         </div>
 
         <div className="mt-8 grid gap-8 lg:grid-cols-2 lg:gap-12">
-          <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
+          <form onSubmit={handleSubmit} noValidate className="flex min-w-0 flex-col gap-5">
             <div>
               <label htmlFor="annualDistance" className="mb-2 block text-sm font-medium text-ink">
                 Annual distance travelled
@@ -148,7 +148,7 @@ export default function FuelCalculator() {
               <label htmlFor="efficiency" className="mb-2 block text-sm font-medium text-ink">
                 Vehicle fuel efficiency
               </label>
-              <div className="flex gap-2">
+              <div className="flex flex-col gap-2 sm:flex-row">
                 <input
                   id="efficiency"
                   name="efficiency"
@@ -165,7 +165,7 @@ export default function FuelCalculator() {
                   aria-label="Efficiency unit"
                   value={fields.efficiencyUnit}
                   onChange={handleChange("efficiencyUnit")}
-                  className="w-48 shrink-0 rounded-md border border-slate-300 bg-white px-3 py-3 text-sm text-ink outline-none transition-colors focus:border-primary"
+                  className="w-full rounded-md border border-slate-300 bg-white px-3 py-3 text-sm text-ink outline-none transition-colors focus:border-primary sm:w-44 sm:shrink-0"
                 >
                   <option value="l_per_100km">litres / 100km</option>
                   <option value="km_per_litre">km / litre</option>
@@ -192,7 +192,7 @@ export default function FuelCalculator() {
             </div>
           </form>
 
-          <div>
+          <div className="min-w-0">
             {result ? (
               <ResultCard>
                 <ResultRow label="Estimated annual fuel consumption" value={`${result.annualLitres.toFixed(1)} litres`} />
@@ -201,7 +201,7 @@ export default function FuelCalculator() {
                 <ResultRow label="Estimated annual cost" value={formatNaira(result.annualCostKobo)} emphasis />
               </ResultCard>
             ) : (
-              <div className="flex h-full min-h-[220px] items-center justify-center rounded-xl border border-dashed border-slate-300 p-6 text-center text-sm text-muted">
+              <div className="flex min-h-55 items-center justify-center rounded-xl border border-dashed border-slate-300 p-6 text-center text-sm text-muted">
                 Fill in the form and select Calculate to see your estimated fuel costs.
               </div>
             )}

@@ -10,7 +10,7 @@ import type { NextRequest } from "next/server";
  * request regardless of what happens here.
  *
  * This only works if Laravel sets the cookie's Domain to the shared
- * parent domain (e.g. `.dacaccounting.com`) so it's visible to requests
+ * parent domain (e.g. `.oacaccounting.com`) so it's visible to requests
  * made to the frontend's own origin. See docs/auth-api-contract.md.
  *
  * Covers /admin too, but ONLY for "is anyone logged in" — this cookie

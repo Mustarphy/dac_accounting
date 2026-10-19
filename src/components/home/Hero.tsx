@@ -12,7 +12,7 @@ export default function Hero() {
     >
       <div className="flex flex-col items-start gap-6">
         <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-          DAC Accounting
+          OAC Accounting
         </span>
         <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl">
           Clear Financial Guidance for Your Business
@@ -34,7 +34,7 @@ export default function Hero() {
       <div className="relative">
         <Image
           src="/images/hero/heroBanner.jpg"
-          alt="Two DAC Accounting professionals reviewing financial documents together at a desk"
+          alt="Two OAC Accounting professionals reviewing financial documents together at a desk"
           width={735}
           height={913}
           priority

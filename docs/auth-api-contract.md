@@ -1,4 +1,4 @@
-# DAC Accounting — Auth API Contract
+# OAC Accounting — Auth API Contract
 
 **Status: Frontend contract — Laravel implementation pending.** The frontend
 in this repo (`src/lib/auth/`, `src/app/{login,signup,forgot-password,reset-password,verify-email,portal}`)
@@ -37,12 +37,12 @@ The frontend's optimistic route protection (`src/proxy.ts`) reads the
 refresh-token cookie's presence directly from the incoming request on the
 **Next.js server**, not from Laravel. For that to work:
 
-- **Cookie name:** `dac_refresh_token` (keep this in sync with
+- **Cookie name:** `oac_refresh_token` (keep this in sync with
   `REFRESH_TOKEN_COOKIE` in `src/proxy.ts` if it changes).
 - **Domain:** frontend and API must share a registrable domain, e.g.
-  `app.dacaccounting.com` (frontend) and `api.dacaccounting.com` (API), with
+  `app.oacaccounting.com` (frontend) and `api.oacaccounting.com` (API), with
   the cookie's `Domain` attribute set to the shared parent
-  (`.dacaccounting.com`). This makes it a same-site cookie, not a
+  (`.oacaccounting.com`). This makes it a same-site cookie, not a
   third-party one — it will be sent on requests to both subdomains and isn't
   subject to third-party-cookie blocking.
 - **If the frontend and API cannot share a parent domain** (e.g. the API is
@@ -76,7 +76,7 @@ persistent client-side storage.
 Laravel must allow the frontend's exact origin(s) with credentials enabled:
 
 ```
-Access-Control-Allow-Origin: https://app.dacaccounting.com   (exact match, never *)
+Access-Control-Allow-Origin: https://app.oacaccounting.com   (exact match, never *)
 Access-Control-Allow-Credentials: true
 Access-Control-Allow-Methods: GET, POST, OPTIONS
 Access-Control-Allow-Headers: Content-Type, Authorization
@@ -133,7 +133,7 @@ every request/response shape referenced below).
 ## 8. Endpoints
 
 All paths are relative to `NEXT_PUBLIC_API_URL` (e.g.
-`https://api.dacaccounting.com/api`). All request/response bodies are JSON.
+`https://api.oacaccounting.com/api`). All request/response bodies are JSON.
 Validation error bodies (422) use `{ message: string, errors: { field:
 string[] } }` — the frontend's `ApiError.fieldErrors` expects exactly this
 shape.

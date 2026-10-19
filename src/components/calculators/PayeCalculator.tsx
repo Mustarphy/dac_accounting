@@ -78,14 +78,14 @@ export default function PayeCalculator() {
         </div>
 
         <div className="mt-8 grid gap-8 lg:grid-cols-2 lg:gap-12">
-          <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
+          <form onSubmit={handleSubmit} noValidate className="flex min-w-0 flex-col gap-5">
             <div>
               <span className="mb-2 block text-sm font-medium text-ink">Pay frequency</span>
               <div className="flex gap-3">
                 {(["monthly", "annual"] as const).map((frequency) => (
                   <label
                     key={frequency}
-                    className="flex flex-1 items-center gap-2 rounded-md border border-slate-300 bg-white px-4 py-3 text-sm capitalize text-ink has-[:checked]:border-primary has-[:checked]:bg-primary-light"
+                    className="flex flex-1 items-center gap-2 rounded-md border border-slate-300 bg-white px-4 py-3 text-sm capitalize text-ink has-checked:border-primary has-checked:bg-primary-light"
                   >
                     <input
                       type="radio"
@@ -189,7 +189,7 @@ export default function PayeCalculator() {
             </div>
           </form>
 
-          <div>
+          <div className="min-w-0">
             {result ? (
               <>
                 <ResultCard>
@@ -243,7 +243,7 @@ export default function PayeCalculator() {
                 )}
               </>
             ) : (
-              <div className="flex h-full min-h-[220px] items-center justify-center rounded-xl border border-dashed border-slate-300 bg-white p-6 text-center text-sm text-muted">
+              <div className="flex min-h-55 items-center justify-center rounded-xl border border-dashed border-slate-300 bg-white p-6 text-center text-sm text-muted">
                 Fill in the form and select Calculate to see your estimated take-home pay.
               </div>
             )}

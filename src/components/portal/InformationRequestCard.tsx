@@ -68,7 +68,7 @@ export default function InformationRequestCard({
         </span>
         <div className="flex-1">
           <p className="text-sm font-semibold text-ink">
-            {isPending ? "DAC Accounting needs more information" : "Information request resolved"}
+            {isPending ? "OAC Accounting needs more information" : "Information request resolved"}
           </p>
           <p className="mt-1 text-sm text-ink">{informationRequest.message}</p>
           <p className="mt-1 text-xs text-muted">{formatDateTime(informationRequest.createdAt)}</p>

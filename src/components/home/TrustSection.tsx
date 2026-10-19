@@ -10,7 +10,7 @@ export default function TrustSection() {
         <SectionHeading
           align="center"
           title="Accounting support you can rely on"
-          description="DAC Accounting takes a professional, considered approach to every client relationship, so you always know where your finances stand."
+          description="OAC Accounting takes a professional, considered approach to every client relationship, so you always know where your finances stand."
           className="mx-auto"
         />
 

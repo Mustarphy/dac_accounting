@@ -4,8 +4,9 @@ import { useState } from "react";
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Container from "@/components/ui/Container";
+import Logo from "@/components/ui/Logo";
 import NavDropdown from "@/components/layout/NavDropdown";
-import { loginNav, mainNav, siteConfig } from "@/lib/site-config";
+import { loginNav, mainNav } from "@/lib/site-config";
 import { useAuth } from "@/lib/auth/AuthContext";
 
 export default function Navbar() {
@@ -17,8 +18,8 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
       <Container as="nav" aria-label="Primary" className="flex items-center justify-between py-4">
-        <Link href="/" className="text-lg font-bold tracking-tight text-ink">
-          {siteConfig.name}
+        <Link href="/" aria-label="OAC Accounting home">
+          <Logo />
         </Link>
 
         <ul className="hidden items-center gap-8 md:flex">

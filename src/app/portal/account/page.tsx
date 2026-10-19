@@ -2,7 +2,7 @@ import { buildMetadata } from "@/lib/metadata";
 import PortalShell from "@/components/portal/PortalShell";
 import AccountSettings from "@/components/portal/AccountSettings";
 
-export const metadata = buildMetadata("DAC Accounting | Account", "Manage your DAC Accounting account.");
+export const metadata = buildMetadata("OAC Accounting | Account", "Manage your OAC Accounting account.");
 
 export default function AccountPage() {
   return (

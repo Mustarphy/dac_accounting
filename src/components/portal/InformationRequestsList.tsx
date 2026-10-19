@@ -56,7 +56,7 @@ export default function InformationRequestsList() {
       <div>
         <h1 className="text-2xl font-bold tracking-tight text-ink">Requests for Information</h1>
         <p className="mt-1 text-sm text-muted">
-          When DAC Accounting needs something from you to continue your work, it&apos;ll show up here.
+          When OAC Accounting needs something from you to continue your work, it&apos;ll show up here.
         </p>
       </div>
 
@@ -64,7 +64,7 @@ export default function InformationRequestsList() {
         <EmptyState
           icon={MessageCircleQuestion}
           title="Nothing needed from you right now"
-          description="If DAC Accounting needs more information to process one of your requests, it'll appear here."
+          description="If OAC Accounting needs more information to process one of your requests, it'll appear here."
         />
       ) : (
         <div className="flex flex-col gap-8">

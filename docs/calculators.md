@@ -1,4 +1,4 @@
-# DAC Accounting — Calculators
+# OAC Accounting — Calculators
 
 Public, no-login-required calculators at `/knowledge/calculators`, linked from a
 "Knowledge" dropdown in the main navigation. Four calculators: **Fuel**,
@@ -27,7 +27,7 @@ src/components/calculators/
   CalculatorNav.tsx                4 anchor-link cards at the top of the page
   ResultCard.tsx / ResultRow.tsx   Shared result-panel presentation
   SourceList.tsx                   Renders a rule's citation + confidence badge
-  CalculatorDisclaimer.tsx         Shared disclaimer + Contact DAC CTA
+  CalculatorDisclaimer.tsx         Shared disclaimer + Contact OAC CTA
   FuelCalculator.tsx
   VatCalculator.tsx
   PropertyCalculator.tsx
@@ -239,7 +239,7 @@ server-side calculation, saved results, or lead capture from a calculator
 project) and a privacy review before implementation — nothing like that
 exists today.
 
-## 9. Outstanding confirmations needed from DAC / a qualified Nigerian tax professional
+## 9. Outstanding confirmations needed from OAC / a qualified Nigerian tax professional
 
 - **Property stamp duty rate (1.5%) and the ₦10,000,000 exemption** — single
   secondary source, not cross-checked against the gazetted Act text. This is
@@ -249,7 +249,7 @@ exists today.
   sources, but none of them are the primary gazette text, since `nrs.gov.ng`
   blocked automated retrieval. Worth a final sanity check against the
   gazetted Nigeria Tax Act, 2025 if/when convenient.
-- Whether DAC wants NHF/NHIS/other reliefs added to the payslip calculator
+- Whether OAC wants NHF/NHIS/other reliefs added to the payslip calculator
   in a future iteration, and whether the property calculator should be
-  expanded to cover consent fees for specific states DAC's clients most
+  expanded to cover consent fees for specific states OAC's clients most
   commonly transact in.

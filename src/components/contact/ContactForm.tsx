@@ -88,7 +88,7 @@ export default function ContactForm() {
         <CheckCircle2 className="size-8 text-primary" aria-hidden="true" />
         <h3 className="text-lg font-semibold text-ink">Message sent</h3>
         <p className="text-sm text-muted">
-          Thanks for reaching out — the DAC Accounting team will get back to you soon.
+          Thanks for reaching out — the OAC Accounting team will get back to you soon.
         </p>
       </div>
     );

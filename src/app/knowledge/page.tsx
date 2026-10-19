@@ -9,8 +9,8 @@ import { articles, knowledgeCategories } from "@/lib/knowledge";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata = buildMetadata(
-  "DAC Accounting | Knowledge",
-  "Practical accounting, tax, business and finance guidance from DAC Accounting."
+  "OAC Accounting | Knowledge",
+  "Practical accounting, tax, business and finance guidance from OAC Accounting."
 );
 
 export default function KnowledgePage() {

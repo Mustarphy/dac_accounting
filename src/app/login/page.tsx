@@ -6,8 +6,8 @@ import LoginForm from "@/components/login/LoginForm";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata = buildMetadata(
-  "DAC Accounting | Client Login",
-  "Sign in to the DAC Accounting client portal."
+  "OAC Accounting | Client Login",
+  "Sign in to the OAC Accounting client portal."
 );
 
 export default function LoginPage() {
@@ -25,7 +25,7 @@ export default function LoginPage() {
                 Welcome back
               </h1>
               <p className="text-sm text-muted">
-                Sign in to access your DAC Accounting client portal.
+                Sign in to access your OAC Accounting client portal.
               </p>
             </div>
 

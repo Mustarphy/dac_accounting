@@ -8,8 +8,8 @@ import { serviceCategories } from "@/lib/services";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata = buildMetadata(
-  "DAC Accounting | Accounting & Financial Services",
-  "An overview of DAC Accounting's business, personal and online accounting services."
+  "OAC Accounting | Accounting & Financial Services",
+  "An overview of OAC Accounting's business, personal and online accounting services."
 );
 
 export default function ServicesPage() {

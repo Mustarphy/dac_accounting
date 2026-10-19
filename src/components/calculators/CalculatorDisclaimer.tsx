@@ -6,11 +6,11 @@ export default function CalculatorDisclaimer() {
       <p className="text-xs leading-relaxed text-muted">
         This is an estimate based on the information you supply and the rules and assumptions
         noted above. It is not tax, accounting, or legal advice and should not be relied on for
-        filing, payroll, or transaction decisions. Contact DAC Accounting for guidance specific
+        filing, payroll, or transaction decisions. Contact OAC Accounting for guidance specific
         to your circumstances.
       </p>
       <Button href="/contact" variant="outline" className="shrink-0">
-        Contact DAC
+        Contact OAC
       </Button>
     </div>
   );

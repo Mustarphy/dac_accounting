@@ -11,13 +11,13 @@ export default function AboutPreview() {
     >
       <div className="flex flex-col items-start gap-6">
         <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-          About DAC Accounting
+          About OAC Accounting
         </span>
         <h2 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
           Straightforward financial support, built around your business
         </h2>
         <p className="text-lg leading-relaxed text-muted">
-          DAC Accounting works closely with businesses and individuals to keep
+          OAC Accounting works closely with businesses and individuals to keep
           their financial records organized and their decisions well
           informed. Our approach is clear, professional and focused on what
           matters to you.
@@ -30,7 +30,7 @@ export default function AboutPreview() {
       <div className="relative">
         <Image
           src="/images/about/aboutBanner.jpg"
-          alt="DAC Accounting team reviewing financial reports together around a table"
+          alt="OAC Accounting team reviewing financial reports together around a table"
           width={736}
           height={736}
           sizes="(max-width: 1024px) 100vw, 50vw"

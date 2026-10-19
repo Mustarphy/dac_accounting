@@ -45,7 +45,7 @@ export type Article = {
 };
 
 /**
- * No DAC-authored articles have been published yet, so this stays empty
+ * No OAC-authored articles have been published yet, so this stays empty
  * rather than shipping placeholder content dressed up as real insights.
  * The Knowledge page and its homepage preview both render an honest
  * "coming soon" state while this is empty, and will switch to real

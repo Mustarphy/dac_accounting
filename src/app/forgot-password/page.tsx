@@ -5,8 +5,8 @@ import ForgotPasswordForm from "@/components/forgot-password/ForgotPasswordForm"
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata = buildMetadata(
-  "DAC Accounting | Forgot Password",
-  "Reset your DAC Accounting client portal password."
+  "OAC Accounting | Forgot Password",
+  "Reset your OAC Accounting client portal password."
 );
 
 export default function ForgotPasswordPage() {

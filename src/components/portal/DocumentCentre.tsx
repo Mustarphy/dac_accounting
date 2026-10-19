@@ -56,7 +56,7 @@ export default function DocumentCentre() {
       <div>
         <h1 className="text-2xl font-bold tracking-tight text-ink">Document Centre</h1>
         <p className="mt-1 text-sm text-muted">
-          Everything you&apos;ve submitted and everything DAC Accounting has issued back to you, in one place.
+          Everything you&apos;ve submitted and everything OAC Accounting has issued back to you, in one place.
         </p>
       </div>
 
@@ -85,7 +85,7 @@ export default function DocumentCentre() {
         <EmptyState
           icon={FolderOpen}
           title="No documents yet"
-          description="Documents you upload to a request, and files DAC Accounting sends back, will appear here."
+          description="Documents you upload to a request, and files OAC Accounting sends back, will appear here."
         />
       )}
 

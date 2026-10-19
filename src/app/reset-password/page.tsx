@@ -6,8 +6,8 @@ import ResetPasswordForm from "@/components/reset-password/ResetPasswordForm";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata = buildMetadata(
-  "DAC Accounting | Reset Password",
-  "Choose a new password for your DAC Accounting account."
+  "OAC Accounting | Reset Password",
+  "Choose a new password for your OAC Accounting account."
 );
 
 export default function ResetPasswordPage() {

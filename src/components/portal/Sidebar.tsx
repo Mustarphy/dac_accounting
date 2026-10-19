@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { siteConfig } from "@/lib/site-config";
+import Logo from "@/components/ui/Logo";
 import { portalNavItems } from "./nav-items";
 
 type SidebarProps = {
@@ -33,8 +33,8 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         )}
       >
         <div className="flex items-center justify-between px-6 py-5">
-          <Link href="/portal" className="text-lg font-bold tracking-tight text-ink">
-            {siteConfig.name}
+          <Link href="/portal" aria-label="OAC Accounting portal home">
+            <Logo />
           </Link>
           <button
             type="button"

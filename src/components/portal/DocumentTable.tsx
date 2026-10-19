@@ -76,7 +76,7 @@ function DocumentRow({ document }: { document: RequestDocumentItem }) {
                 : "rounded-full bg-slate-100 px-2 py-0.5 text-xs font-semibold text-ink"
             }
           >
-            {document.source === "dac" ? "From DAC" : "You uploaded"}
+            {document.source === "dac" ? "From OAC" : "You uploaded"}
           </span>
         </td>
         <td className="px-4 py-3">
@@ -118,7 +118,7 @@ function DocumentRow({ document }: { document: RequestDocumentItem }) {
         <tr>
           <td colSpan={7} className="bg-red-50 px-4 py-3">
             <p className="text-sm text-red-800">
-              <span className="font-semibold">DAC Accounting needs attention on this document:</span>{" "}
+              <span className="font-semibold">OAC Accounting needs attention on this document:</span>{" "}
               {document.reviewNotes}
             </p>
             {document.reviewedAt && (

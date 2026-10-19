@@ -2,7 +2,7 @@ import { buildMetadata } from "@/lib/metadata";
 import PortalShell from "@/components/portal/PortalShell";
 import NewRequestForm from "@/components/portal/NewRequestForm";
 
-export const metadata = buildMetadata("DAC Accounting | New Request", "Submit a new accounting request.");
+export const metadata = buildMetadata("OAC Accounting | New Request", "Submit a new accounting request.");
 
 export default function NewRequestPage() {
   return (

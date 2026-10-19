@@ -10,7 +10,7 @@ export default function FinalCTA() {
           Let&apos;s make your financial work simpler.
         </h2>
         <p className="max-w-xl text-lg leading-relaxed text-white/80">
-          Have questions about your accounting needs? Speak with the DAC
+          Have questions about your accounting needs? Speak with the OAC
           Accounting team.
         </p>
         <Button href={primaryCta.href} variant="secondary" showArrow>

@@ -5,8 +5,8 @@ import SignupForm from "@/components/signup/SignupForm";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata = buildMetadata(
-  "DAC Accounting | Create Account",
-  "Create your DAC Accounting client portal account."
+  "OAC Accounting | Create Account",
+  "Create your OAC Accounting client portal account."
 );
 
 export default function SignupPage() {
@@ -21,7 +21,7 @@ export default function SignupPage() {
                 Create Account
               </span>
               <h1 className="text-2xl font-bold tracking-tight text-ink">Get started</h1>
-              <p className="text-sm text-muted">Create your DAC Accounting client portal account.</p>
+              <p className="text-sm text-muted">Create your OAC Accounting client portal account.</p>
             </div>
 
             <SignupForm />

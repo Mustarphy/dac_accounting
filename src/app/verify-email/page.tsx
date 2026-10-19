@@ -6,8 +6,8 @@ import VerifyEmailStatus from "@/components/verify-email/VerifyEmailStatus";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata = buildMetadata(
-  "DAC Accounting | Verify Email",
-  "Verify your DAC Accounting account email address."
+  "OAC Accounting | Verify Email",
+  "Verify your OAC Accounting account email address."
 );
 
 export default function VerifyEmailPage() {

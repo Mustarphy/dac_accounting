@@ -5,16 +5,16 @@ export type NavItem = {
 };
 
 /**
- * Central site configuration. Update these values once DAC Accounting
+ * Central site configuration. Update these values once OAC Accounting
  * provides final contact details, and every component that references
  * them will stay in sync.
  */
 export const siteConfig = {
-  name: "DAC Accounting",
-  shortName: "DAC",
+  name: "OAC Accounting",
+  shortName: "OAC",
   tagline: "Professional accounting and financial support for your business.",
-  // TODO(DAC): replace with the firm's real contact details.
-  email: "YOUR_EMAIL_HERE",
+  // TODO(OAC): replace with the firm's real contact details.
+  email: "contact@oacaccounting.com",
   phone: "YOUR_PHONE_HERE",
   whatsapp: "YOUR_WHATSAPP_NUMBER_HERE",
   address: "YOUR_ADDRESS_HERE",

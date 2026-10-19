@@ -1,6 +1,6 @@
 /**
  * Mirrors the backend's App\Http\Resources\Client\* resources exactly —
- * see dac-accounting-backend/docs/backend-setup.md and the resource
+ * see oac-accounting-backend/docs/backend-setup.md and the resource
  * classes themselves. Keep these in sync deliberately; a silent mismatch
  * here is exactly what broke /auth/me earlier in this project.
  */
